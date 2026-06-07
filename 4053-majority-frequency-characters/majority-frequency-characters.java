@@ -35,3 +35,7 @@ class Solution {
     }
 }
 
+//phela frequency store kro
+//hash map kri
+//max value and key mai ek hai ki tie wale case mai agar maxvalue==arr1.get(b) hai toh prioriyt mai high frequency value ko milegi
+//string mai add kr do key ko bs ho gya solution
