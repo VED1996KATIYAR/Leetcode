@@ -7,43 +7,20 @@ class Solution {
         }else{
             k=(nums.length/2);
         }
-        for(int i=0;i<nums.length;i++){
-            int ctr=0;
-            for(int j=0;j<nums.length;j++){
-                if(nums[i]==nums[j]){
-                    ctr+=1;
-                }
-            }
-            if(ctr>=k){
-                return nums[i];
+        
+        HashMap<Integer,Integer> arr=new HashMap<>();
+        for(int a:nums){
+            if(arr.containsKey(a)){
+                arr.put(a,arr.get(a)+1);
             }else{
-                ctr=0;
+                arr.put(a,1);
+            }
+        }
+        for(int a:arr.keySet()){
+            if(arr.get(a)>=k){
+                return a;
             }
         }
         return -1;
-
-
-        // int l=nums.length;
-        // int cal=0;
-        // if(l%2==0){
-        //     cal=l/2;
-        // }else{
-        //     cal=(l+1)/2;
-        // }
-
-        // int number=0;
-        // int count=0;
-        // for(int i:nums){
-        //     if(number==0){
-        //         number=i;
-        //     }
-        //     if(number==i){
-        //         count++;
-        //     }else{
-        //         count--;
-        //     }
-        // }
-        // return number;
-        
     }
 }
