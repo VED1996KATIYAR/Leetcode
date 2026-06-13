@@ -16,3 +16,4 @@ class Solution {
 //25-8+1
 ///agar kisi alhpa ko starting sa fetch krna hai toh (char)(v+'z')
 //agar last mai toh (char)('z'-v);
+//122-8=114
