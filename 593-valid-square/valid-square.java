@@ -11,17 +11,13 @@ class Solution {
         arr[5] = distance(p3, p4);
         
         Arrays.sort(arr);
-        
-        // Condition 1: All 4 side lengths must be completely equal (arr[0] to arr[3])
-        // Condition 2: Both diagonal lengths must be completely equal (arr[4] and arr[5])
-        // Condition 3: Side length must be positive (arr[0] > 0) to avoid overlapping points
         return arr[0] == arr[1] && arr[1] == arr[2] && arr[2] == arr[3] &&
                arr[4] == arr[5] &&
                arr[0] > 0;
     }
     
-    // Computes squared Euclidean distance: (x1 - x2)^2 + (y1 - y2)^2
-    private int distance(int[] p, int[] q) {
+
+    public static int distance(int[] p, int[] q) {
         return (p[0] - q[0]) * (p[0] - q[0]) + (p[1] - q[1]) * (p[1] - q[1]);
     }
 }
