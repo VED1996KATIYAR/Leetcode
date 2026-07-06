@@ -2,23 +2,23 @@ class Solution {
     public int countSubstrings(String s) {
         int counter=0;
         for(int i=0;i<s.length();i++){
-            String ss="";
-            for(int j=i;j<s.length();j++){
-                ss=s.substring(i,j+1);
 
-            
-            boolean b=checkit(ss);
-            if(b){
-                counter++;
-                }}
-                        }
+            for(int j=i;j<s.length();j++){
+                String ss=s.substring(i,j+1);
+                boolean v=checkit(ss);
+                if(v){
+                    counter++;
+                }
+
+            }
+        }
         return counter;
     }
-    public static boolean checkit(String s){
+    public static boolean checkit(String ss){
         int start=0;
-        int end=s.length()-1;
+        int end=ss.length()-1;
         while(start<=end){
-            if(s.charAt(start)!=s.charAt(end)){
+            if(ss.charAt(start)!=ss.charAt(end)){
                 return false;
             }
             start++;
