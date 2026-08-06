@@ -2,7 +2,7 @@ class Solution {
     public int smallestNumber(int n, int t) {
         int temp=0;int sum=1;
         int a=0;
-        for(int i=n;;++i){
+        for(int i=n;;i++){
              temp=i;
             while(temp!=0){
                 int mod=temp % 10;
