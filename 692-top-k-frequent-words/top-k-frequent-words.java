@@ -22,11 +22,10 @@ class Solution {
         }
         List<String> ans=new ArrayList<>(map.keySet());
         ans.sort((a, b) -> {
-    if (map.get(a).equals(map.get(b))) {
+    if (map.get(a)==(map.get(b))) {
         return a.compareTo(b);   
     }
-    return map.get(b) - map.get(a); 
-});
+    return map.get(b) - map.get(a); });
         List<String> ans1=new ArrayList<>();
         for(int i=0;i<k;i++){
             ans1.add(ans.get(i));
