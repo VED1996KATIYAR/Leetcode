@@ -22,7 +22,7 @@ class Solution {
         }
         List<String> ans=new ArrayList<>(map.keySet());
         ans.sort((a, b) -> {
-    if (map.get(a)==(map.get(b))) {
+    if (map.get(a).equals(map.get(b))) {
         return a.compareTo(b);   
     }
     return map.get(b) - map.get(a); });
@@ -33,3 +33,5 @@ class Solution {
         return ans1;
     }
 }
+
+//.equals() ki jagah == bhi ho skta hai
