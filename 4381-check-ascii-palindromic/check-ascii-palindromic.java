@@ -12,7 +12,7 @@ public class Solution {
             char ch=s.charAt(i);
             int ans=ch;
             String binary = Integer.toBinaryString(ans);
-            // जब तक लंबाई 8 न हो, आगे '0' जोड़ते रहें
+            
             while (binary.length() < 8) {
                 binary = "0" + binary;
             }
