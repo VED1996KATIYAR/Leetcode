@@ -17,7 +17,15 @@ class Solution {
             arr.add(d);
             temp=temp.next;
         }
-        Collections.sort(arr);
+        for(int j=1;j<arr.size();j++){
+            int key=arr.get(j);
+            int i=j-1;
+            while(i>=0 && arr.get(i)>key){
+                arr.set(i+1,arr.get(i));
+                i-=1;
+            }
+            arr.set(i+1,key);
+        }
         ListNode temp1=head;
         int index=0;
         while(temp1!=null){
