@@ -1,5 +1,5 @@
 class Solution {
-    public  static int minimumDeletions(int[] nums){
+   public  static int minimumDeletions(int[] nums){
         int nums1[]=new int[nums.length];
         for(int i=0;i<nums.length;i++){
             nums1[i]=nums[i];
@@ -25,13 +25,8 @@ class Solution {
         int minindex=Math.min(one,two);
         s2=nums.length-minindex;
 
-        int s3=0;
-        for (int i=0;i<=minindex;i++){
-            s3++;
-        }
-        for(int i=maxindex;i<= nums.length-1;i++){
-            s3++;
-        }
+        int s3=(minindex+1)+(nums.length-maxindex);
+        
         return Math.min(s1,Math.min(s2,s3));
     }
 }
