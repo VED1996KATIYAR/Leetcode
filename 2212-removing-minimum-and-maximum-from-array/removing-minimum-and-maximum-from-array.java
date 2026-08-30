@@ -19,15 +19,11 @@ class Solution {
         }
         int s1=0;
         int maxindex=Math.max(one,two);
-        for(int i=0;i<=maxindex;i++){
-            s1++;
-        }
+        s1=maxindex+1;
 
         int s2=0;
         int minindex=Math.min(one,two);
-        for(int i=minindex;i<= nums.length-1;i++){
-            s2++;
-        }
+        s2=nums.length-minindex;
 
         int s3=0;
         for (int i=0;i<=minindex;i++){
